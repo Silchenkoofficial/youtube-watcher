@@ -8,9 +8,7 @@ const showVideo = () => {
   $.getJSON(
     `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoID}&key=${API_KEY}`,
     function (data) {
-      console.log(data.items[0]);
       data = data.items[0];
-
       let likesPercent = Math.round(
         (100 * parseInt(data.statistics.likeCount)) /
           (parseInt(data.statistics.likeCount) +
@@ -23,9 +21,13 @@ const showVideo = () => {
       let year = new Date(data.snippet.publishedAt).getFullYear();
 
       let htmlData = `
-      <iframe title="YouTube video player" frameborder="0" src="https://www.youtube.com./embed/${videoID}"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
+      <iframe
+        src="https://www.youtube.com/embed/${videoID}?rel=0&amp;modestbranding=1&amp;showinfo=0&amp;controls=1&amp;iv_load_policy=3&amp;autoplay=0&amp;enablejsapi=1" 
+        seamless="" 
+        frameborder="0" 
+        allowfullscreen="" 
+        allow="autoplay; encrypted-media; fullscreen"
+      ></iframe>
   <div class="video-player__video-info video-info">
       <div class="video-info__name">${data.snippet.title}</div>
       <div class="video-info__sub-info">
@@ -77,9 +79,76 @@ const showVideo = () => {
   );
 };
 
+const loadRelatedVideos = () => {
+  $.getJSON(
+    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=${API_KEY}`,
+    (data) => {
+      console.log(data);
+      console.log(data.items[0].snippet.thumbnails.standard.url);
+      let htmlRelatedVideo = `
+      <div class="video">
+      <div class="video__image">
+        <img
+          src="${data.items[0].snippet.thumbnails.default.url}"
+          alt="Related image"
+        />
+      </div>
+      <div class="video__title">
+        Mini Raspberry Pi Server With Built Built BuiltBuilt
+        Built Built
+      </div>
+      <div class="video__chips">
+        <div class="chip">
+          <div class="chip__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="chip__text">97%</div>
+        </div>
+        <div class="chip">
+          <div class="chip__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="chip__text">27:05</div>
+        </div>
+        <div class="chip">
+          <div class="chip__text">1172 Views</div>
+        </div>
+      </div>
+    </div>
+      `;
+      $("#js-related-videos").append(htmlRelatedVideo);
+    }
+  );
+};
+
 $(document).ready(() => {
   $(".video-page").val(localStorage.getItem("video-url"));
   if (iFrameVideo) {
     showVideo();
+    loadRelatedVideos();
   }
 });

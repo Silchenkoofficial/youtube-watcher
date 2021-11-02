@@ -458,4 +458,70 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.video-player .video__placeholder {
+  width: 100%;
+  aspect-ratio: 2;
+  background-color: #c6c6c6;
+  -webkit-animation: placeholder 1.5s infinite;
+          animation: placeholder 1.5s infinite;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+.video-player .related__placeholder {
+  width: 100%;
+  -webkit-animation: placeholder 1.5s infinite;
+          animation: placeholder 1.5s infinite;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+.video-player .related__placeholder .image {
+  height: 150px;
+  background-color: #c6c6c6;
+}
+
+.video-player .related__placeholder .text {
+  margin-top: 10px;
+  width: 60%;
+  height: 30px;
+  background-color: #c6c6c6;
+}
+
+@-webkit-keyframes placeholder {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes placeholder {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=main.css.map */

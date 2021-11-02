@@ -313,4 +313,46 @@ body {
       text-overflow: ellipsis;
     }
   }
+
+  .video__placeholder {
+    width: 100%;
+    aspect-ratio: 2;
+    background-color: #c6c6c6;
+    animation: placeholder 1.5s infinite;
+    transition: opacity 1.5s;
+  }
+
+  .related__placeholder {
+    width: 100%;
+    animation: placeholder 1.5s infinite;
+    transition: opacity 1.5s;
+    .image {
+      height: 150px;
+      background-color: #c6c6c6;
+    }
+    .text {
+      margin-top: 10px;
+      width: 60%;
+      height: 30px;
+      background-color: #c6c6c6;
+    }
+  }
+}
+
+@keyframes placeholder {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }

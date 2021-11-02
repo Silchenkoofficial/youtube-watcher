@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Задаем кодировку для страницы -->
+    <meta charset="utf-8">
+
+    <!-- Сообщает Internet Explorer использовать самый новый движок для рендера -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Задание тега Viewport для адаптивного отображения страницы -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Тег Description -->
+    <meta name="description" content="Описание сайта содержит не более 150 символов">
+
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="mask-icon" href="./favicon.svg" color="#000000">
+    <link rel="apple-touch-icon" href="./favicon.svg">
+
+    <!-- Задание тега Title -->
+    <title>Video Play</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!-- ICONS -->
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo--link">
+                            <img width="126" height="90" src="../assets/images/logo.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <form class="header__search">
+                        <div class="input__wrapper">
+                            <input type="text" class="header__search--input video-page" placeholder="Paste a video link"
+                                id="js-search-input">
+                            <div id="js-submit-btn" class="header__search--button _desktop--button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+                                    viewBox="0 0 24 24" stroke="#fff">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="js-submit-btn" class="header__search--button _mobile--button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+                                viewBox="0 0 24 24" stroke="#fff">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="video-player">
+                <div class="container">
+                    <div class="video-player__wrapper">
+                        <div class="video-player__col-xl video-player__iframe" id="js-youtube-iframe">
+                            <!-- <iframe id="js-youtube-iframe" title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <div class="video-player__video-info video-info">
+                                <div class="video-info__name">Mini Raspberry Pi Server With Built In UPS & Stats Display
+                                </div>
+                                <div class="video-info__sub-info">
+                                    <div class="video__chips">
+                                        <div class="chip">
+                                            <div class="chip__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div class="chip__text">97%</div>
+                                        </div>
+                                        <div class="chip">
+                                            <div class="chip__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div class="chip__text">27:05</div>
+                                        </div>
+                                        <div class="chip">
+                                            <div class="chip__text">1172 Views </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-info__channel-name">Bayley Robertson </div>
+                                    <div class="video-info__video-date">1 day ago</div>
+                                </div>
+                                <div class="video-info__description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="video-player__col">
+                            <div class="video-player__related related">
+                                <div class="related__title">Related Videos</div>
+                                <div class="related__videos videos">
+                                    <div class="video">
+                                        <div class="video__image">
+                                            <img src="../assets/images/related.png" alt="Related image">
+                                        </div>
+                                        <div class="video__title">Mini Raspberry Pi Server With Built Built BuiltBuilt
+                                            Built Built</div>
+                                        <div class="video__chips">
+                                            <div class="chip">
+                                                <div class="chip__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div class="chip__text">97%</div>
+                                            </div>
+                                            <div class="chip">
+                                                <div class="chip__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div class="chip__text">27:05</div>
+                                            </div>
+                                            <div class="chip">
+                                                <div class="chip__text">1172 Views </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video">
+                                        <div class="video__image">
+                                            <img src="../assets/images/related.png" alt="Related image">
+                                        </div>
+                                        <div class="video__title">Mini Raspberry Pi Server With Built Built BuiltBuilt
+                                            Built Built</div>
+                                        <div class="video__chips">
+                                            <div class="chip">
+                                                <div class="chip__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div class="chip__text">97%</div>
+                                            </div>
+                                            <div class="chip">
+                                                <div class="chip__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div class="chip__text">27:05</div>
+                                            </div>
+                                            <div class="chip">
+                                                <div class="chip__text">1172 Views </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video">
+                                        <div class="video__image">
+                                            <img src="../assets/images/related.png" alt="Related image">
+                                        </div>
+                                        <div class="video__title">Mini Raspberry Pi Server With Built Built BuiltBuilt
+                                            Built Built</div>
+                                        <div class="video__chips">
+                                            <div class="chip">
+                                                <div class="chip__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div class="chip__text">97%</div>
+                                            </div>
+                                            <div class="chip">
+                                                <div class="chip__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div class="chip__text">27:05</div>
+                                            </div>
+                                            <div class="chip">
+                                                <div class="chip__text">1172 Views </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video">
+                                        <div class="video__image">
+                                            <img src="../assets/images/related.png" alt="Related image">
+                                        </div>
+                                        <div class="video__title">Mini Raspberry Pi Server With Built Built BuiltBuilt
+                                            Built Built</div>
+                                        <div class="video__chips">
+                                            <div class="chip">
+                                                <div class="chip__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div class="chip__text">97%</div>
+                                            </div>
+                                            <div class="chip">
+                                                <div class="chip__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div class="chip__text">27:05</div>
+                                            </div>
+                                            <div class="chip">
+                                                <div class="chip__text">1172 Views </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__copyright">
+                        Copyright © <span id="js-year"></span> All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/searchVideo.js"></script>
+</body>
+
+</html>

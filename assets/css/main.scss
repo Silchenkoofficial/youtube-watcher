@@ -68,7 +68,7 @@ body {
       border-radius: 9999px;
       .header__search--input {
         width: 100%;
-        font-size: 18px;
+        @include adaptive-font(18, 14);
         padding: 10px 30px;
       }
       .header__search--button {
@@ -192,6 +192,9 @@ body {
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 739px) {
+      flex-direction: column;
+    }
   }
   &__col {
     width: 100%;
@@ -209,7 +212,7 @@ body {
   &__iframe iframe {
     width: 100%;
     min-width: 290px;
-    min-height: 370px;
+    min-height: 250px;
     aspect-ratio: 2;
   }
   .related {

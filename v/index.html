@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Задаем кодировку для страницы -->
     <meta charset="utf-8" />
 
@@ -11,10 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Тег Description -->
-    <meta
-      name="description"
-      content="Описание сайта содержит не более 150 символов"
-    />
+    <meta name="description" content="Описание сайта содержит не более 150 символов" />
 
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
@@ -27,126 +25,78 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 
     <!-- STYLES -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/main.css" />
 
     <!-- ICONS -->
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="wrapper">
-      <header class="header">
-        <div class="container">
-          <div class="header__wrapper">
-            <div class="header__logo">
-              <a href="/" class="header__logo--link">
-                <img
-                  width="126"
-                  height="90"
-                  src="../assets/images/logo.svg"
-                  alt="Logo"
-                />
-              </a>
-            </div>
-            <form class="header__search" id="js-search-form">
-              <div class="input__wrapper">
-                <input
-                  type="text"
-                  class="header__search--input video-page"
-                  placeholder="Paste a video link"
-                  id="js-search-input"
-                />
-                <button
-                  type="submit"
-                  id="js-submit-btn"
-                  class="header__search--button _desktop--button"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="#fff"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <button
-                type="submit"
-                id="js-submit-btn"
-                class="header__search--button _mobile--button"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="#fff"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-            </form>
-          </div>
-        </div>
-      </header>
-      <main class="main">
-        <section class="video-player">
-          <div class="container">
-            <div class="video-player__wrapper">
-              <div
-                class="video-player__col-xl video-player__iframe"
-                id="js-youtube-iframe"
-              ></div>
-              <div class="video-player__col">
-                <div class="video-player__related related">
-                  <div class="related__title">Related Videos</div>
-                  <div
-                    class="related__videos videos"
-                    id="js-related-videos"
-                  ></div>
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo--link">
+                            <img width="126" height="90" src="../assets/images/logo.svg" alt="Logo" />
+                        </a>
+                    </div>
+                    <form class="header__search" id="js-search-form">
+                        <div class="input__wrapper">
+                            <input type="text" class="header__search--input video-page" placeholder="Paste a video link"
+                                id="js-search-input" />
+                            <button type="submit" id="js-submit-btn" class="header__search--button _desktop--button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+                                    viewBox="0 0 24 24" stroke="#fff">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button type="submit" id="js-submit-btn" class="header__search--button _mobile--button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+                                viewBox="0 0 24 24" stroke="#fff">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </form>
                 </div>
-              </div>
             </div>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__wrapper">
-            <div class="footer__copyright">
-              Copyright © <span id="js-year"></span> All Rights Reserved.
+        </header>
+        <main class="main">
+            <section class="video-player">
+                <div class="container">
+                    <div class="video-player__wrapper">
+                        <div class="video-player__col-xl video-player__iframe" id="js-youtube-iframe"></div>
+                        <div class="video-player__col">
+                            <div class="video-player__related related">
+                                <div class="related__title">Похожие видео</div>
+                                <div class="related__videos videos" id="js-related-videos"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__copyright">
+                        Copyright © <span id="js-year"></span> All Rights Reserved.
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
     </div>
     <!-- SCRIPTS -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/searchVideo.js"></script>
-  </body>
+</body>
+
 </html>

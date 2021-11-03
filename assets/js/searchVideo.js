@@ -105,7 +105,11 @@ const loadRelatedVideos = async () => {
       data.items
         .filter((_, index) => index !== data.items.length - 1)
         .map((video) => {
-          if (video.id && video.snippet.thumbnails && video.snippet.title) {
+          if (
+            video?.id &&
+            video?.snippet?.thumbnails &&
+            video?.snippet?.title
+          ) {
             let videoLink = document.createElement("a");
             videoLink.classList.add("video");
             videoLink.href = `/v/?id=${video?.id?.videoId}`;

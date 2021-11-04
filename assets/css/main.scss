@@ -29,7 +29,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -42,7 +42,6 @@ body {
 }
 
 .main {
-  flex: 1;
 }
 
 .header {
@@ -62,7 +61,7 @@ body {
       width: 100%;
       padding: 3px;
       background-color: #fff;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       border: 1px solid #d2d2d2;
       border-radius: 9999px;
@@ -72,7 +71,7 @@ body {
         padding: 10px 30px;
       }
       .header__search--button {
-        width: auto;
+        width: 168px;
       }
     }
     & > *:not(:last-child) {
@@ -80,9 +79,9 @@ body {
     }
     .header__search--button {
       width: 100%;
-      padding: 10px 70px;
+      padding: 10px 0;
       background-color: #fdbb00;
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 9999px;
@@ -123,18 +122,19 @@ body {
       margin: 100px 0;
       display: flex;
       flex-wrap: wrap;
-      @media (max-width: 647px) {
+      justify-content: space-between;
+      @media (max-width: 767.99px) {
         justify-content: center;
       }
-      @media (min-width: 648px) {
-        .step {
-          margin-right: 50px;
-        }
-      }
+      // @media (min-width: 648px) {
+      //   .step {
+      //     margin-right: 20px;
+      //   }
+      // }
     }
     .step {
       margin-bottom: 50px;
-      max-width: 259px;
+      width: 190px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -144,11 +144,14 @@ body {
       }
       &__image {
         position: relative;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         padding: 40px;
         background-color: #fff;
         border: 1px solid #d2d2d2;
         border-radius: 10px;
+        height: 152px;
         &::after {
           content: attr(data-step);
           position: absolute;
@@ -164,10 +167,12 @@ body {
         }
       }
       &__title {
+        width: 100%;
         font-size: 18px;
         font-weight: bold;
       }
       &__text {
+        width: 100%;
         font-size: 18px;
       }
     }
@@ -213,7 +218,7 @@ body {
     width: 100%;
     min-width: 290px;
     min-height: 250px;
-    aspect-ratio: 2;
+    height: 350px;
   }
   .related {
     &__title {

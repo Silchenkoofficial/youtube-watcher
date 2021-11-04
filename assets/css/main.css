@@ -12,7 +12,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,12 +27,6 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 .header {
@@ -65,9 +59,9 @@ body {
   width: 100%;
   padding: 3px;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -93,7 +87,7 @@ body {
 }
 
 .header__search .input__wrapper .header__search--button {
-  width: auto;
+  width: 168px;
 }
 
 .header__search > *:not(:last-child) {
@@ -102,11 +96,11 @@ body {
 
 .header__search .header__search--button {
   width: 100%;
-  padding: 10px 70px;
+  padding: 10px 0;
   background-color: #fdbb00;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -191,9 +185,12 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@media (max-width: 647px) {
+@media (max-width: 767.99px) {
   .how .how__wrapper .how__steps.steps {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -201,15 +198,9 @@ body {
   }
 }
 
-@media (min-width: 648px) {
-  .how .how__wrapper .how__steps.steps .step {
-    margin-right: 50px;
-  }
-}
-
 .how .how__wrapper .step {
   margin-bottom: 50px;
-  max-width: 259px;
+  width: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,11 +220,20 @@ body {
 
 .how .how__wrapper .step__image {
   position: relative;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 40px;
   background-color: #fff;
   border: 1px solid #d2d2d2;
   border-radius: 10px;
+  height: 152px;
 }
 
 .how .how__wrapper .step__image::after {
@@ -251,11 +251,13 @@ body {
 }
 
 .how .how__wrapper .step__title {
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
 }
 
 .how .how__wrapper .step__text {
+  width: 100%;
   font-size: 18px;
 }
 
@@ -329,7 +331,7 @@ body {
   width: 100%;
   min-width: 290px;
   min-height: 250px;
-  aspect-ratio: 2;
+  height: 350px;
 }
 
 .video-player .related__title {

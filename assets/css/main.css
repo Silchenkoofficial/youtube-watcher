@@ -461,6 +461,14 @@ body {
   text-overflow: ellipsis;
 }
 
+.video-player .video-info__description .description__link {
+  color: #0454be;
+}
+
+.video-player .video-info__description .description__link:hover {
+  text-decoration: underline;
+}
+
 .video-player .video__placeholder {
   width: 100%;
   aspect-ratio: 2;

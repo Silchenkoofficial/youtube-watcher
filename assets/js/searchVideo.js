@@ -28,6 +28,7 @@ const showVideo = async () => {
   )
     .then((data) => data.json())
     .then((data) => {
+      console.log(data);
       data = data.items[0];
       let day = new Date(data.snippet.publishedAt).getDate();
       let month = new Date(data.snippet.publishedAt).getMonth() + 1;
@@ -83,9 +84,12 @@ const showVideo = async () => {
             }</div>
             <div class="video-info__video-date">${day}.${month}.${year}</div>
         </div>
-        <div class="video-info__description">${
-          data.snippet.localized.description
-        }</div>
+        <div class="video-info__description">${data.snippet.description
+          .replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, "$1 <br>$2")
+          .replace(
+            /\b(https?\:\/\/\S+)/gm,
+            '<a class="description__link" href="$1">$1</a>'
+          )}</div>
     </div>
         `;
 

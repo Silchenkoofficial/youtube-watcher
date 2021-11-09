@@ -316,6 +316,12 @@ body {
     &__description {
       overflow: hidden;
       text-overflow: ellipsis;
+      .description__link {
+        color: #0454be;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 

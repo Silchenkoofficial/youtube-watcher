@@ -10,5 +10,13 @@ searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   localStorage.setItem("video-url", searchInput.value);
   const videoID = [...searchInput.value.split("v=")][1];
-  window.location = `${document.location.protocol}//${document.location.host}/v/?id=${videoID}`;
+  console.log([...searchInput.value.split("v=")][1]);
+  if (
+    [...searchInput.value.split("v=")][1] === "" ||
+    [...searchInput.value.split("v=")][1] === undefined
+  ) {
+    document.querySelector(".error-message").textContent = "Введите ссылку";
+  } else {
+    window.location = `${document.location.protocol}//${document.location.host}/v/?id=${videoID}`;
+  }
 });

@@ -41,7 +41,8 @@ body {
   padding-right: 15px;
 }
 
-.main {
+.error-message {
+  color: red;
 }
 
 .header {
@@ -119,18 +120,16 @@ body {
       font-weight: bold;
     }
     .how__steps.steps {
-      margin: 100px 0;
+      padding: 100px 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       @media (max-width: 767.99px) {
         justify-content: center;
       }
-      // @media (min-width: 648px) {
-      //   .step {
-      //     margin-right: 20px;
-      //   }
-      // }
+      @media (min-width: 410px) {
+        margin: -20px;
+      }
     }
     .step {
       margin-bottom: 50px;
@@ -142,6 +141,9 @@ body {
       & > *:not(:last-child) {
         margin-bottom: 15px;
       }
+      @media (min-width: 410px) {
+        margin: 20px;
+      }
       &__image {
         position: relative;
         display: inline-flex;
@@ -151,7 +153,8 @@ body {
         background-color: #fff;
         border: 1px solid #d2d2d2;
         border-radius: 10px;
-        height: 152px;
+        width: 190px;
+        height: 190px;
         &::after {
           content: attr(data-step);
           position: absolute;
@@ -268,6 +271,9 @@ body {
         background-color: #7e7e7e;
         border-radius: 999px;
         &__icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
           margin-right: 5px;
         }
         &__text {
@@ -316,6 +322,12 @@ body {
     &__description {
       overflow: hidden;
       text-overflow: ellipsis;
+      .description__link {
+        color: #0454be;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -360,4 +372,8 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.channel__videos {
+  background-color: #fff;
 }

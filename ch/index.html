@@ -17,7 +17,7 @@
     />
 
     <meta name="theme-color" content="#ffffff" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="mask-icon" href="./favicon.svg" color="#000000" />
     <link rel="apple-touch-icon" href="./favicon.svg" />
 
@@ -25,11 +25,11 @@
     <title>Video Play</title>
 
     <!-- FONTS -->
-    <link rel="stylesheet" href="./assets/css/stylesheet.css" />
+    <link rel="stylesheet" href="../assets/css/stylesheet.css" />
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
 
     <!-- ICONS -->
   </head>
@@ -54,7 +54,7 @@
               <div class="input__wrapper">
                 <input
                   type="text"
-                  class="header__search--input"
+                  class="header__search--input video-page"
                   placeholder="Paste a video link"
                   id="js-search-input"
                 />
@@ -106,62 +106,11 @@
         </div>
       </header>
       <main class="main">
-        <section class="how">
+        <div class="channel__videos">
           <div class="container">
-            <div class="how__wrapper">
-              <div class="how__title">How it works</div>
-              <div class="how__subtitle">
-                To use our service, follow a simple three steps:
-              </div>
-              <div class="how__steps steps">
-                <div class="step">
-                  <div class="step__image" data-step="1">
-                    <img
-                      width="70"
-                      height="70"
-                      src="./assets/images/steps/step1.png"
-                      alt="Step 1"
-                    />
-                  </div>
-                  <div class="step__title">Copy</div>
-                  <div class="step__text">
-                    Copy the link to the video that you want to watch without
-                    ads.
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step__image" data-step="2">
-                    <img
-                      width="123"
-                      height="61"
-                      src="./assets/images/steps/step2.png"
-                      alt="Step 2"
-                    />
-                  </div>
-                  <div class="step__title">Paste</div>
-                  <div class="step__text">
-                    Paste the link into the search box on this page.
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step__image" data-step="3">
-                    <img
-                      width="82"
-                      height="82"
-                      src="./assets/images/steps/step3.png"
-                      alt="Step 3"
-                    />
-                  </div>
-                  <div class="step__title">Enjoy</div>
-                  <div class="step__text">
-                    Click on the search button and enjoy watching videos without
-                    ads.
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="channel-info"></div>
           </div>
-        </section>
+        </div>
       </main>
       <footer class="footer">
         <div class="container">
@@ -179,7 +128,7 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script defer src="./assets/js/main.js"></script>
-    <script defer src="./assets/js/searchVideo.js"></script>
+    <script defer src="../assets/js/main.js"></script>
+    <script src="../assets/js/channelInfo.js"></script>
   </body>
 </html>

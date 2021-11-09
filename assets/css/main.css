@@ -29,6 +29,10 @@ body {
   padding-right: 15px;
 }
 
+.error-message {
+  color: red;
+}
+
 .header {
   padding: 35px 0;
   background-color: #fbfbfb;
@@ -76,7 +80,7 @@ body {
 
 @media (max-width: 767px) {
   .header__search .input__wrapper .header__search--input {
-    font-size: calc( 14px + 6.8 * ((100vw - 320px) / 1920));
+    font-size: calc( 14px + 6.8 * ((100vw - 320px) / 1920));
   }
 }
 
@@ -152,7 +156,7 @@ body {
 
 @media (max-width: 767px) {
   .how .how__wrapper .how__title {
-    font-size: calc( 34px + 23.8 * ((100vw - 320px) / 1920));
+    font-size: calc( 34px + 23.8 * ((100vw - 320px) / 1920));
   }
 }
 
@@ -168,7 +172,7 @@ body {
 
 @media (max-width: 767px) {
   .how .how__wrapper .how__subtitle {
-    font-size: calc( 18px + 10.2 * ((100vw - 320px) / 1920));
+    font-size: calc( 18px + 10.2 * ((100vw - 320px) / 1920));
   }
 }
 
@@ -179,7 +183,7 @@ body {
 }
 
 .how .how__wrapper .how__steps.steps {
-  margin: 100px 0;
+  padding: 100px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,6 +199,12 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (min-width: 410px) {
+  .how .how__wrapper .how__steps.steps {
+    margin: -20px;
   }
 }
 
@@ -218,6 +228,12 @@ body {
   margin-bottom: 15px;
 }
 
+@media (min-width: 410px) {
+  .how .how__wrapper .step {
+    margin: 20px;
+  }
+}
+
 .how .how__wrapper .step__image {
   position: relative;
   display: -webkit-inline-box;
@@ -233,7 +249,8 @@ body {
   background-color: #fff;
   border: 1px solid #d2d2d2;
   border-radius: 10px;
-  height: 152px;
+  width: 190px;
+  height: 190px;
 }
 
 .how .how__wrapper .step__image::after {
@@ -273,7 +290,7 @@ body {
 
 @media (max-width: 767px) {
   .footer .footer__wrapper .footer__copyright {
-    font-size: calc( 14px + 3.4 * ((100vw - 320px) / 1920));
+    font-size: calc( 14px + 3.4 * ((100vw - 320px) / 1920));
   }
 }
 
@@ -403,6 +420,15 @@ body {
 }
 
 .video-player .video__chips .chip__icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: 5px;
 }
 
@@ -459,6 +485,14 @@ body {
 .video-player .video-info__description {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.video-player .video-info__description .description__link {
+  color: #0454be;
+}
+
+.video-player .video-info__description .description__link:hover {
+  text-decoration: underline;
 }
 
 .video-player .video__placeholder {
@@ -525,5 +559,9 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.channel__videos {
+  background-color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

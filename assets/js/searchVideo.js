@@ -117,7 +117,7 @@ const showVideo = async () => {
 
 const loadRelatedVideos = async () => {
   await fetch(
-    `https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${getVideoID()}&type=video&key=${API_KEY}`
+    `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&relatedToVideoId=${getVideoID()}&type=video&key=${API_KEY}`
   )
     .then((data) => data.json())
     .then((data) => {

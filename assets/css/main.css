@@ -325,10 +325,6 @@ body {
 
 .video-player__col {
   height: 100vh;
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   margin-bottom: 30px;
   overflow-y: scroll;
 }
@@ -336,7 +332,6 @@ body {
 .video-player__col-xl {
   height: 100vh;
   overflow-y: hidden;
-  width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -353,6 +348,10 @@ body {
   width: 100%;
   min-height: 150px;
   aspect-ratio: 2;
+}
+
+.video-player .related {
+  padding-right: 20px;
 }
 
 .video-player .related__title {
@@ -376,7 +375,7 @@ body {
 }
 
 .video {
-  width: 315px;
+  width: 300px;
   overflow: hidden;
 }
 

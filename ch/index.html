@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Задаем кодировку для страницы -->
+  <meta charset="utf-8" />
+
+  <!-- Сообщает Internet Explorer использовать самый новый движок для рендера -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <!-- Задание тега Viewport для адаптивного отображения страницы -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Тег Description -->
+  <meta name="description" content="Описание сайта содержит не более 150 символов" />
+
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="mask-icon" href="./favicon.svg" color="#000000" />
+  <link rel="apple-touch-icon" href="./favicon.svg" />
+
+  <!-- Задание тега Title -->
+  <title>Video Play</title>
+
+  <!-- FONTS -->
+  <link rel="stylesheet" href="../assets/css/stylesheet.css" />
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+
+  <!-- ICONS -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="/" class="header__logo--link">
+              <img width="126" height="90" src="../assets/images/logo.svg" alt="Logo" />
+            </a>
+          </div>
+          <form class="header__search" id="js-search-form">
+            <p class="error-message"></p>
+            <div class="input__wrapper">
+              <input type="text" class="header__search--input video-page" placeholder="Paste a video link"
+                id="js-search-input" />
+              <button type="submit" id="js-submit-btn" class="header__search--button _desktop--button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24"
+                  stroke="#fff">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </div>
+            <button type="submit" id="js-submit-btn" class="header__search--button _mobile--button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24"
+                stroke="#fff">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="channel__videos">
+        <div class="container">
+          <div class="channel-info">Videos by: <span id="js-channel-title"></span></div>
+          <div class="channel__videos__wrapper"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__copyright">
+            Copyright © <span id="js-year">2021</span> All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script defer src="../assets/js/main.js"></script>
+  <script src="../assets/js/channelInfo.js"></script>
+</body>
+
+</html>

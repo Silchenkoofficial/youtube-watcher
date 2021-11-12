@@ -515,8 +515,6 @@ body {
 }
 
 .video-info__description {
-  overflow-y: scroll;
-  overflow-x: hidden;
   text-overflow: ellipsis;
 }
 

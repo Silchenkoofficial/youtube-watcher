@@ -339,8 +339,6 @@ body {
     text-overflow: ellipsis;
   }
   &__description {
-    overflow-y: scroll;
-    overflow-x: hidden;
     text-overflow: ellipsis;
     .description__link {
       color: #0454be;

@@ -206,25 +206,31 @@ body {
     }
   }
   &__col {
+    @media (max-width: 740px) {
+      flex: 1;
+    }
     height: 100vh;
     margin-bottom: 30px;
     overflow-y: scroll;
   }
   &__col-xl {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     overflow-y: hidden;
     @media (min-width: 567px) {
       margin-right: 20px;
     }
     flex: 1;
+    // @media (max-width: 740px) {
+    //   flex: 2;
+    // }
     margin-bottom: 30px;
   }
   &__iframe iframe {
     width: 100%;
-    // min-width: 290px;
-    min-height: 150px;
+    // min-height: 400px;
     aspect-ratio: 2;
-    // height: 350px;
   }
   .related {
     padding-right: 20px;
@@ -295,6 +301,8 @@ body {
 }
 
 .video-info {
+  flex: 1;
+  overflow-y: scroll;
   &__name {
     margin: 24px 0 18px;
     font-size: 16px;
@@ -329,7 +337,7 @@ body {
     text-overflow: ellipsis;
   }
   &__description {
-    overflow: hidden;
+    overflow-y: scroll;
     text-overflow: ellipsis;
     .description__link {
       color: #0454be;

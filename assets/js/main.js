@@ -15,7 +15,7 @@ searchForm.addEventListener("submit", (e) => {
     [...searchInput.value.split("v=")][1] === "" ||
     [...searchInput.value.split("v=")][1] === undefined
   ) {
-    document.querySelector(".error-message").textContent = "Введите ссылку";
+    document.querySelector(".error-message").textContent = "Type a link...";
   } else {
     window.location = `${document.location.protocol}//${document.location.host}/v/?id=${videoID}`;
   }

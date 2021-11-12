@@ -212,6 +212,7 @@ body {
     height: 100vh;
     margin-bottom: 30px;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
   &__col-xl {
     display: flex;
@@ -303,6 +304,7 @@ body {
 .video-info {
   flex: 1;
   overflow-y: scroll;
+  overflow-x: hidden;
   &__name {
     margin: 24px 0 18px;
     font-size: 16px;
@@ -338,6 +340,7 @@ body {
   }
   &__description {
     overflow-y: scroll;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     .description__link {
       color: #0454be;

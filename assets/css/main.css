@@ -327,6 +327,7 @@ body {
   height: 100vh;
   margin-bottom: 30px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 @media (max-width: 740px) {
@@ -466,6 +467,7 @@ body {
       -ms-flex: 1;
           flex: 1;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .video-info__name {
@@ -514,6 +516,7 @@ body {
 
 .video-info__description {
   overflow-y: scroll;
+  overflow-x: hidden;
   text-overflow: ellipsis;
 }
 
